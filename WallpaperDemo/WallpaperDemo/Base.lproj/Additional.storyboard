@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Paper View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="PaperViewController" id="vXZ-lx-hvc" customClass="PaperViewController" customModule="WallpaperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YKg-q4-qe8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJ8-L4-UBW">
+                                <rect key="frame" x="535" y="550" width="39" height="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IYT-Sv-uWF" kind="unwind" unwindAction="close:" id="Ek4-Ri-TqB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uJ8-L4-UBW" firstAttribute="leading" secondItem="YKg-q4-qe8" secondAttribute="trailing" constant="-65" id="8wX-0m-NKE"/>
+                            <constraint firstItem="uJ8-L4-UBW" firstAttribute="top" secondItem="YKg-q4-qe8" secondAttribute="bottom" constant="-50" id="FEd-nX-j8L"/>
+                            <constraint firstItem="YKg-q4-qe8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="YfZ-7d-DOF"/>
+                            <constraint firstItem="YKg-q4-qe8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="bZ4-ka-21c"/>
+                            <constraint firstAttribute="trailing" secondItem="YKg-q4-qe8" secondAttribute="trailing" id="eGC-2N-qm8"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YKg-q4-qe8" secondAttribute="bottom" id="pxS-Zq-Yaj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uJ8-L4-UBW" secondAttribute="trailing" constant="6" id="ywZ-tz-Mfv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="YKg-q4-qe8" id="hRL-vu-3yy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="IYT-Sv-uWF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1601" y="920"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="01.jpg" width="320" height="480"/>
+    </resources>
+</document>
